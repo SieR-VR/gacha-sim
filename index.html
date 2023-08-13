@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gacha-Simulator</title>
+  <style>
+    .chance-input {
+      width: 10em;
+      height: 30px;
+
+      margin-left: 5px;
+      margin-right: 5px;
+      
+      border: 3px solid black;
+      border-radius: 10px;
+
+      padding: 5px;
+    }
+
+    .gacha-button {
+      width: 15em;
+      height: 40px;
+
+      margin-left: 5px;
+      margin-right: 5px;
+      
+      border: 3px solid black;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div style="display: flex;">
+    <input 
+      id="three-star-chance"
+      class="chance-input"
+      type="number" 
+      min="0"
+      max="100" 
+      placeholder="3성 확률"
+      value="3"
+    >
+    <input 
+      id="two-star-chance"
+      class="chance-input"
+      type="number"
+      min="0" 
+      max="100" 
+      placeholder="2성 확률"
+      value="18.5"
+    >
+    <input 
+      id="one-star-chance" 
+      class="chance-input"
+      type="number"
+      min="0" 
+      max="100"
+      value="78.5"
+      placeholder="1성 확률"
+    >
+  </div>
+
+  <div style="display: flex; margin-top: 10px;">
+    <input 
+      id="three-star-count"
+      class="chance-input"
+      type="number" 
+      step="1" 
+      value="20"
+      placeholder="3성 개수"
+    >
+    <input 
+      id="two-star-count"
+      class="chance-input"
+      type="number"
+      step="1"
+      value="20"
+      placeholder="2성 개수"
+    >
+    <input 
+      id="one-star-count" 
+      class="chance-input"
+      type="number"
+      step="1" 
+      value="20"
+      placeholder="1성 개수"
+    >
+  </div>
+
+  <div style="display: flex; margin-top: 10px;">
+    <button id="ten-times" class="gacha-button">10연챠</button>
+    <button id="one-time" class="gacha-button">단챠</button>
+  </div>
+
+  <div>
+    <p>단챠 결과</p>
+    <div id="result"></div>
+
+    <p>10연챠 결과</p>
+    <div id="result-ten"></div>
+  </div>
+
+  <div>
+    <p>도감</p>
+    <div id="collection"></div>
+  </div>
+
+  <button id="reset-button">리셋</button>
+  <button id="update-count">개수 업데이트</button>
+
+  <script src="./index.ts" type="module"></script>
+</body>
+
+</html>
